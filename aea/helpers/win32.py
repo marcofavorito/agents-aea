@@ -34,3 +34,4 @@ def enable_ctrl_c_support() -> None:
 
     if not kernel32.SetConsoleCtrlHandler(None, False):
         logger.debug(f"SetConsoleCtrlHandler Error: {ctypes.get_last_error()}")  # type: ignore
+    logger.debug("Windows CTRL-C support activated.")
